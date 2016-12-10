@@ -63,6 +63,14 @@ $(document).ready(function () {
             $(this).next().addClass('in');
         }
     });
+    
+    $('#vt_menu .title-menu').click(function () {
+        if ($(this).find('ul.mega-nav').hasClass('in')) {
+            $(this).find('ul.mega-nav').removeClass('in');
+        } else {
+            $(this).find('ul.mega-nav').addClass('in');
+        }
+    });
 });
 
 
