@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     function showSearchBoxOnScroll(e) {
         var currentPos = $(document).scrollTop();
-        var currentContentPos = $('.position-08').offset().top;
+        var currentContentPos = $('.menufix-point').offset().top;
         if (currentPos >= currentContentPos) {
             $('.header').addClass('affix');
             if ($('.mega-nav').hasClass('show')) {
@@ -63,12 +63,22 @@ $(document).ready(function () {
             $(this).next().addClass('in');
         }
     });
-    
+
     $('#vt_menu .title-menu').click(function () {
         if ($(this).find('ul.mega-nav').hasClass('in')) {
             $(this).find('ul.mega-nav').removeClass('in');
         } else {
             $(this).find('ul.mega-nav').addClass('in');
+        }
+    });
+
+    $('.tab-accordion').click(function () {
+        if($(this).hasClass('accordion-open')){
+            $(this).removeClass('accordion-open').addClass('accordion-close');
+            $(this).next().addClass('hide').removeClass('show');
+        }else{
+            $(this).removeClass('accordion-close').addClass('accordion-open');
+            $(this).next().addClass('show').removeClass('hide');
         }
     });
 });

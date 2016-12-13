@@ -282,6 +282,11 @@
     #box-footer .inner-top .block {
         margin-bottom: 20px;
     }
+
+    #box-left .block .block-title {
+        float: left;
+        width: 100%;
+    }
 }
 
 @media (max-width: 640px) and (min-width: 361px){
