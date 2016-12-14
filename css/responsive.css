@@ -150,6 +150,15 @@
     #vt_menu .vertical-menu>div .btn-menu:before {
         left: 10px;
     }
+
+    .product-view .product-img-box {
+        width: 100%;
+    }
+
+    .product-view .product-shop {
+        width: 100%;
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 767px){
@@ -309,6 +318,11 @@
 
     .block-slidebar .advanced-search .form-search input {
         width: 200px;
+    }
+    
+    #mobile-nav, .box-header-mobile-01 {
+        position: absolute;
+        top: 170px;
     }
 }
 
