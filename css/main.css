@@ -2131,3 +2131,30 @@ body .jcarousel-control-prev, body .jcarousel-control-next{
 .input-box select {
     width: 100%;
 }
+
+/* reponsive banner */
+.ads-banner{
+    clear: both;
+    position: relative;
+    top: 0;
+    margin: auto;
+}
+
+.ads-product{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+}
+
+.banner-wrapper{
+    position: absolute;
+}
+
+.banner-wrapper{
+    width: 100%;
+}
+
+.bxslider .ads-product a:hover img{
+    opacity: 0.9;
+}

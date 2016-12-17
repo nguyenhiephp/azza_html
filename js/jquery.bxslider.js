@@ -110,8 +110,22 @@
 		var windowWidth = $(window).width();
 		var windowHeight = $(window).height();
 
+                
+                /* HiepNT - Set time interval to auto slide */
+                var desireSlide = 0;
+                var slideTimeInterval = function(){
+                    setInterval(function(){ 
+          
+                        if(desireSlide >= getPagerQty()){
+                            desireSlide = 0;
+                        }
+                        console.log(desireSlide);
+                        el.goToSlide(desireSlide);
+                        desireSlide++;
 
+                    }, 3000);
 
+                }
 		/**
 		 * ===================================================================================
 		 * = PRIVATE FUNCTIONS
@@ -206,8 +220,8 @@
 			// make modifications to the viewport (.bx-viewport)
 			slider.viewport.css({
 				width: '100%',
-				overflow: 'hidden',
-				position: 'relative'
+				overflow: 'hidden'
+//				position: 'relative'
 			});
 			slider.viewport.parent().css({
 				maxWidth: getViewportMaxWidth()
@@ -267,6 +281,8 @@
 			}
 			// preload all images, then perform final DOM / CSS modifications that depend on images being loaded
 			loadElements(preloadSelector, start);
+//                        console.log(getViewportMaxWidth());
+                        slideTimeInterval();
 		}
 
 		var loadElements = function(selector, callback){
@@ -304,6 +320,8 @@
 			if (slider.settings.mode == 'vertical') slider.settings.adaptiveHeight = true;
 			// set the viewport height
 			slider.viewport.height(getViewportHeight());
+                        /* HiepNT - Calculate good dimention */
+                        $('.ads-product img').css({'height' : getViewportHeight()/2,'width' : getViewportHeight()/2/200*170});
 			// make sure everything is positioned just right (same as a window resize)
 			el.redrawSlider();
 			// onSliderLoad callback
@@ -322,6 +340,7 @@
 			if (slider.settings.controls) updateDirectionControls();
 			// if touchEnabled is true, setup the touch events
 			if (slider.settings.touchEnabled && !slider.settings.ticker) initTouch();
+
 		}
 
 		/**
@@ -604,7 +623,7 @@
 				}
 				// var linkContent = slider.settings.buildPager && $.isFunction(slider.settings.buildPager) ? slider.settings.buildPager(i) : i + 1;
 				// add the markup to the string
-				pagerHtml += '<div class="bx-pager-item"><a href="" data-slide-index="' + i + '" class="bx-pager-link">' + linkContent + '</a></div>';
+				pagerHtml += '<div class="bx-pager-item"><a href="#" data-slide-index="' + i + '" class="bx-pager-link">' + linkContent + '</a></div>';
 			};
 			// populate the pager element with pager links
 			slider.pagerEl.html(pagerHtml);
@@ -767,8 +786,10 @@
 				var pagerIndex = parseInt(pagerLink.attr('data-slide-index'));
 				// if clicked pager link is not active, continue with the goToSlide call
 				if(pagerIndex != slider.active.index) el.goToSlide(pagerIndex);
+                                console.log(pagerIndex);
 				e.preventDefault();
 			}
+                        return false;
 		}
 
 		/**

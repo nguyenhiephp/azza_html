@@ -24,10 +24,10 @@ and open the template in the editor.
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- bxSlider Javascript file -->
         <script type="text/javascript" src="js/jquery.bxslider.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
 
         <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
         <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
     </head>
     <body class="home-page">
         <div id="box-wrapper">
@@ -110,7 +110,7 @@ and open the template in the editor.
                                                 Danh mục sản phẩm
                                                 <span class="btn-menu"></span>
                                             </div>
-                                            
+
                                             <ul class="s mega-nav show">
                                                 <li class="level0 parent icon1">
                                                     <a class="" href="/danh-muc/thoi-trang" id="vt_megamenu_16">
@@ -743,9 +743,35 @@ and open the template in the editor.
             <div id="box-content">
                 <div class="box-slideshow">
                     <div class="rev_slider_wrapper">
-                        <ul class="bxslider">
-                            <li><img src="images/slide01.jpg" /></li>
-                            <li><img src="images/slide02.jpg" /></li>
+
+
+                        <ul class="res-slder bxslider">
+                            <li>
+                                <div class="banner-wrapper">
+                                    <div class="ads-banner container">
+                                        <div class="ads-product">
+                                            <a class="item1" href="#">
+                                                <img src="images/banner/banner-sp02.png" alt="" style="width: 170px; height: 200px;">
+                                            </a>
+                                            <a class="item2" href="#"><img src="images/banner/banner-sp01.png" alt="" style="width: 170px; height: 200px; position: absolute"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/slide01.jpg"/>
+                            </li>
+
+                            <li>
+                                <div class="banner-wrapper">
+                                    <div class="ads-banner container">
+                                        <div class="ads-product">
+                                            <a class="item1" href="#"><img src="images/banner/banner-sp01.png" alt="" style="width: 170px; height: 200px;"></a>
+                                            <a class="item2" href="#"><img src="images/banner/banner-sp02.png" alt="" style="width: 170px; height: 200px;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/slide02.jpg"/>
+
+                            </li>
                         </ul>
                     </div><!-- END OF SLIDER WRAPPER -->
                 </div>
@@ -1764,5 +1790,9 @@ and open the template in the editor.
                 </ul>
             </div>
         </div>
+        <!--        <script type="text/javascript">
+                    $('.bxslider li > img').css('position', 'absolute');
+                </script>-->
     </body>
+
 </html>

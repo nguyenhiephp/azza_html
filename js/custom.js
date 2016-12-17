@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('.bxslider').bxSlider();
 
@@ -9,13 +10,15 @@ $(document).ready(function () {
             if ($('.mega-nav').hasClass('show')) {
                 $('.mega-nav').removeClass('show').addClass('hide');
             }
+            jQuery('.mega-nav').addClass('hide');
         } else {
             $('.header').removeClass('affix');
-            if ($('.mega-nav').hasClass('hide')) {
+            if ($('.mega-nav').hasClass('hide') && $('.home-page').lenght > 0) {
                 $('.mega-nav').removeClass('hide').addClass('show');
             }
         }
     }
+
 
     $('body').bind('mousewheel', showSearchBoxOnScroll);
     $('body').bind('scroll', showSearchBoxOnScroll);
@@ -73,10 +76,10 @@ $(document).ready(function () {
     });
 
     $('.tab-accordion').click(function () {
-        if($(this).hasClass('accordion-open')){
+        if ($(this).hasClass('accordion-open')) {
             $(this).removeClass('accordion-open').addClass('accordion-close');
             $(this).next().addClass('hide').removeClass('show');
-        }else{
+        } else {
             $(this).removeClass('accordion-close').addClass('accordion-open');
             $(this).next().addClass('show').removeClass('hide');
         }
