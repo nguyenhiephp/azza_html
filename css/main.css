@@ -2075,6 +2075,7 @@ body .jcarousel-control-prev, body .jcarousel-control-next{
     height: 30px;
     background: #f93;
     color: #fff;
+    cursor: pointer;
 }
 
 .col2-left-layout .product-view .product-shop .wrap-box .product-options-bottom #product-addtocart-button,
@@ -2181,7 +2182,6 @@ body .jcarousel-control-prev, body .jcarousel-control-next{
 }
 
 .search-listing .product-image img{
-    width: 100%;
     height: auto;
 }
 
@@ -2206,7 +2206,7 @@ a.addtocart-button:hover{
 
 .search-listing .seach-item{
     padding-top: 20px;
-    border-bottom: 1px solid #ababab;
+    border-bottom: 1px solid #cdcdcd;
 }
 
 .search-listing .product-image{
@@ -2247,4 +2247,15 @@ a.addtocart-button:hover{
 
 .search-listing .product-info{
     padding-bottom: 10px;
+}
+
+.product-image a{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-image p{
+    position: relative;
+    width: 100%;
 }

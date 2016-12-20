@@ -213,10 +213,6 @@
         margin-top: 0;
     }
 
-    .advanced-search{
-        padding-right: 30px;
-    }
-
     .advanced-search .form-search input {
         width: 225px;
         min-width: 120px;
@@ -296,6 +292,15 @@
         float: left;
         width: 100%;
     }
+    
+    .search-listing .product-info{
+        padding-top: 10px;
+    }
+    
+    .search-listing .addtocart-button{
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 640px) and (min-width: 361px){
@@ -341,6 +346,15 @@
 
     .advanced-search .form-search input {
         width: 200px;
+    }
+    
+    #mobile-nav, .box-header-mobile-01 {
+        position: absolute;
+        top: 170px;
+    }
+    
+    .advanced-search{
+        padding-right: 0;
     }
 }
 
